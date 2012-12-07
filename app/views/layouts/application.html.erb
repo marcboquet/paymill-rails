@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Awesome Subscriptions</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "https://bridge.paymill.com/", "application" %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript">
+      var PAYMILL_PUBLIC_KEY = '<%=PAYMILL_PUBLIC_KEY%>';
+  </script>
+</head>
+<body>
+  <div id="container">
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
+    <%= yield %>
+  </div>
+</body>
+</html>

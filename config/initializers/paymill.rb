@@ -1,0 +1,2 @@
+Paymill.api_key = "712ef6086d9fe2c40ed7a20a4f5bbdf7"
+PAYMILL_PUBLIC_KEY = "12815585679946df837c0188be08e81f"
