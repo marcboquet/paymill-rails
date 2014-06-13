@@ -1,4 +1,4 @@
 <div id="subscription">
   <h1>Your Subscription</h1>
-  <p>You have signed up for the <strong><%= @subscription.plan.name %></strong> plan </strong> for just <strong><%= number_to_currency @subscription.plan.price, currency: "€" %></strong> per month!</p>
+  <p>You have signed up for the <strong><%= @subscription.plan.name %></strong> plan </strong> for just <strong><%= number_to_currency @subscription.plan.price, unit: @subscription.plan.currency.titleize %></strong> each <%= @subscription.plan.interval.titleize %>!</p>
 </div>

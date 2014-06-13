@@ -1,5 +1,5 @@
 <h1>Signing up for "<%= @subscription.plan.name %>"</h1>
-<p>It's only <strong><%= number_to_currency @subscription.plan.price, unit: "€" %></strong> per month!</p>
+<p>It's only <strong><%= number_to_currency @subscription.plan.price, unit: @subscription.plan.currency.titleize %></strong> each <%= @subscription.plan.interval.titleize %>!</p>
 
 <%= form_for @subscription do |f| %>
   <% if @subscription.errors.any? %>
