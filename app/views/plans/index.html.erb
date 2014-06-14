@@ -5,14 +5,19 @@
       <div class="name"><%= plan.name %></div>
       <div class="details">
         <div class="price">
-          <%= number_to_currency plan.price, unit: "€" %>
+          <%= number_to_currency plan.price, unit: plan.currency.titleize %>
         </div>
-        <div class="per_month">per month</div>
+        <div class="interval">
+          <%= plan.interval.titleize %>
+        </div>
         <div class="signup">
           <%= link_to "Sign up", new_subscription_path(:plan_id => plan.id) %>
         </div>
       </div>
     </div>
+  <% end %>
+  <% if @plans.empty? %>
+    <p>There are no plans, see <a href="https://github.com/apalancat/paymill-rails#usage">Usage</a> section of the README.</p>
   <% end %>
   <div class="clear"></div>
 </div>

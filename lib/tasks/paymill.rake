@@ -8,7 +8,9 @@ namespace :paymill do
     
     offers = Paymill::Offer.all
     offers.each do |offer|
-      Plan.create paymill_id: offer.id, name: offer.name, price: offer.amount / 100.0
+      Plan.create paymill_id: offer.id, name: offer.name, price: offer.amount / 100.0, interval: offer.interval, currency: offer.currency
     end
+
+    puts "#{offers.size} #{'plan'.pluralize(offers.size)} imported"
   end
 end

@@ -12,7 +12,6 @@
   }
   .plan {
     float: left;
-    width: 200px;
     text-align: center;
     margin-right: 10px;
     .name {
@@ -46,7 +45,7 @@
     .price {
       font-size: 50px;
     }
-    .per_month {
+    .interval {
       font-size: 12px;
       margin-bottom: 10px;
       color: #5E5E5E;
