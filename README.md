@@ -3,6 +3,10 @@
 Sample app for a subscription-based rails site using [Paymill](https://paymill.com/) to process payments.  
 The code is based on [Railscast #288](http://railscasts.com/episodes/288-billing-with-stripe) (Billing with Stripe)
 
+### WARNING
+
+This app is not handling failed transactions, check out [issue #4](https://github.com/apalancat/paymill-rails/issues/4) for more information
+
 ## Usage
 
 Register for a test account at [paymill.com](https://paymill.com/) and create the subscription plans (they called them Offers)
